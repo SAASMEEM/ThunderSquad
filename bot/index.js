@@ -1,9 +1,9 @@
 // Require the necessary discord.js classes
-import { env } from "node:process";
-import fs from 'node:fs';
-import path from 'node:path';
-import { Client, Collection, GatewayIntentBits } from 'discord.js';
-import dotenv from "dotenv";
+const { env } = require('node:process');
+const fs = require('node:fs');
+const path = require('node:path');
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const dotenv = require('dotenv');
 
 dotenv.config({ path:'../.env' });
 
