@@ -1,4 +1,5 @@
 # node dependencies
+/node_modules
 */node_modules
 
 # Bot config
