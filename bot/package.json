@@ -5,8 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"format": "prettier -w . && xo --fix .",
-		"lint": "prettier -c . && xo",
+		"format": "prettier -w .",
+		"lint": "prettier -c .",
 		"start": "node index.js",
 		"deploy-local": "node deploy-commands-local.js",
 		"deploy-global": "node deploy-commands-global.js",
