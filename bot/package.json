@@ -10,7 +10,6 @@
     "deploy-global": "node deploy-commands-global.js",
     "update-local": "npm run deploy-local && npm run start",
     "update-global": "npm run deploy-global && npm run start"
-
   },
   "repository": {
     "type": "git",
@@ -28,7 +27,7 @@
     "dotenv": "^16.3.1"
   },
   "engines": {
-		"node": ">=16.6.0",
-		"npm": ">=7.0.0"
-	}
+    "node": ">=16.6.0",
+    "npm": ">=7.0.0"
+  }
 }
