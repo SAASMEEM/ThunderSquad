@@ -1,7 +1,7 @@
 ---
 name: Development
 about: Issue for development purpose
-title: 'Dev: [Specific title]'
+title: 'Dev: '
 labels: ''
 assignees: ''
 
