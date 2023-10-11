@@ -12,7 +12,7 @@ module.exports = {
 				if (error) {
 					console.error("Error executing query:", error);
 				} else {
-					console.log("Database connection successfull")
+					console.log("Database connection successfull");
 
 					// console.log("Query results:", results);
 
