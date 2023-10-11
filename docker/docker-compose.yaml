@@ -3,6 +3,7 @@ version: '3.8'
 services:
   mariadb:
     image: mariadb:latest
+    container_name: thundersquad-db
     environment:
       MYSQL_ROOT_PASSWORD: r9oTSl2PhLbsXe
       MYSQL_DATABASE: thundersquad
@@ -10,14 +11,8 @@ services:
       MYSQL_PASSWORD: T3lhzpwPLYvQq1
     ports:
       - "3306:3306"
-    networks:
-      - db-net
     volumes:
       - mariadb-data:/var/lib/mysql
-
-networks:
-  db-net:
-    driver: bridge
 
 volumes:
   mariadb-data:
