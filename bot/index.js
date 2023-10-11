@@ -2,6 +2,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, GatewayIntentBits } = require("discord.js");
+const mysql = require('mysql2');
 const { env } = require("node:process");
 const dotenv = require("dotenv");
 
@@ -47,5 +48,26 @@ for (const file of eventFiles) {
 	}
 }
 
+
 // Log in to Discord with your client's token
 client.login(env.token);
+
+// Create a connection to the database
+const connection = mysql.createConnection({
+	host: 'localhost',  // Docker container hostname
+	user: 'thundersquad',
+	password: 'T3lhzpwPLYvQq1',
+	database: 'thundersquad',
+});
+
+// Connect to the database
+connection.connect((err) => {
+	if (err) {
+		console.error('Error connecting to the database:', err);
+		return;
+	}
+	console.log('Connected to the database');
+
+	// Close connection
+	connection.end();
+});

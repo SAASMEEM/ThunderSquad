@@ -17,7 +17,9 @@
 		"url": "https://github.com/SAASMEEM/ThunderSquad/issues"
 	},
 	"homepage": "https://github.com/SAASMEEM/ThunderSquad#readme",
-	"dependencies": {},
+	"dependencies": {
+		"mysql2": "^3.6.1"
+	},
 	"devDependencies": {
 		"lint-staged": "^14.0.1",
 		"prettier": "^3.0.3"
