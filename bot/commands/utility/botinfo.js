@@ -22,11 +22,19 @@ module.exports = {
 			.setColor(interaction.member.displayHexColor)
 			.setTimestamp()
 			.addFields(
-				{ name: "Bot Name", value: `${interaction.client.user.tag}`, inline: false },
+				{
+					name: "Bot Name",
+					value: `${interaction.client.user.tag}`,
+					inline: false,
+				},
 				{ name: "RAM", value: `${ram}MB`, inline: true },
 				{ name: "Uptime", value: `${d}d, ${h}h, ${m}m, ${s}s`, inline: true },
 				{ name: "Bot Latency", value: `${ping}ms`, inline: true },
-				{ name: "API Latency", value: `${interaction.client.ws.ping}ms`, inline: true },
+				{
+					name: "API Latency",
+					value: `${interaction.client.ws.ping}ms`,
+					inline: true,
+				},
 				{ name: "Discord.js", value: `${version}`, inline: true },
 				{ name: "Node", value: `${process.version}`, inline: true }
 			);
