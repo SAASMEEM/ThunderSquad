@@ -4,13 +4,14 @@ services:
   mariadb:
     image: mariadb:latest
     container_name: thundersquad-db
+    env_file: .env
     environment:
-      MYSQL_ROOT_PASSWORD: r9oTSl2PhLbsXe
-      MYSQL_DATABASE: thundersquad
-      MYSQL_USER: thundersquad
-      MYSQL_PASSWORD: T3lhzpwPLYvQq1
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - "3306:3306"
+      - "3316:3306"
     volumes:
       - mariadb-data:/var/lib/mysql
 
