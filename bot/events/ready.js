@@ -8,7 +8,7 @@ module.exports = {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 
 		mariaConnect((connection) => {
-			connection.query("SELECT * FROM Persons", (error, results, fields) => {
+			connection.query("SELECT * FROM testtable", (error, results, fields) => {
 				if (error) {
 					console.error("Error executing query:", error);
 				} else {
