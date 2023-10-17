@@ -1,12 +1,17 @@
 const mysql = require("mysql2");
+const { env } = require("node:process");
+const dotenv = require("dotenv");
+
+dotenv.config({ path: "../docker/docker.env" });
 
 async function mariaConnect(queryCallback) {
 	// Create a connection to the database
 	const connection = mysql.createConnection({
 		host: "localhost",
-		user: "thundersquad",
-		password: "T3lhzpwPLYvQq1",
-		database: "thundersquad",
+		port: 3316,
+		user: env.MYSQL_USER,
+		password: env.MYSQL_PASSWORD,
+		database: env.MYSQL_DATABASE,
 	});
 
 	// Connect to the database
